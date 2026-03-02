@@ -1,77 +1,92 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>サーバールール</title>
-    <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; }
-        h1 { text-align: center; }
-        details { margin-bottom: 15px; border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; }
-        summary { font-weight: bold; cursor: pointer; font-size: 1.2em; padding: 10px; display: block; }
-        ul { margin-top: 10px; padding-left: 20px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>サーバールール</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 40px;
+
+    background-image: url("background.png");
+    background-repeat: repeat;
+    background-size: 256px;
+}
+
+/* 全体を少し暗くして可読性アップ */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: -1;
+}
+
+/* 中央コンテナ */
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* タイトル */
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
+
+/* ルールボックス */
+details {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.92);
+    padding: 15px 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 8px 0;
+}
+
+ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+/* 最終改定日 */
+.footer {
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(0,0,0,0.8);
+}
+</style>
 </head>
+
 <body>
-    <h1>サーバールール</h1>
 
-    <details>
-        <summary>全般ルール</summary>
-        <ul>
-            <li>い、荒らし行為は禁止します。</li>
-            <li>ろ、所謂クレクレ行為は禁止します。</li>
-            <li>は、以下に当てはまる、もしくは準ずる言動を禁止します。
-                <ul>
-                    <li>・犯罪や自傷を仄めかす、誹謗中傷</li>
-                    <li>・卑猥、他人を不快にさせる、非常識</li>
-                    <li>・鯖主の許可を得ていない宣伝および勧誘</li>
-                    <li>・Discordの規約違反</li>
-                    <li>・スパム発言</li>
-                </ul>
-            </li>
-            <li>に、当ルールの穴をつく行為を禁止します。</li>
-            <li>ほ、他人に迷惑をかける行為を禁止します。</li>
-            <li>へ、メンションOKのロールがついている人以外へのメンションを基本禁止します。</li>
-            <li>と、鯖主が不適切と判断した場合、治安維持の為当ルールの範囲外でも処罰を下すことがあります。</li>
-            <li>ち、常識の範囲内でどんどん雑談しましょう。</li>
-            <li>り、ルールは予告なく改定される場合があります。</li>
-        </ul>
-    </details>
+<div class="container">
 
-    <details>
-        <summary>マイクラルール</summary>
-        <ul>
-            <li>い、ハックの使用は厳禁です。使用が発覚した場合、即座にBANとなります。</li>
-            <li>ろ、サブアカウントは1つまで可能です。参加を希望する場合、サブアカウントである旨を記入してください。</li>
-            <li>は、全ての財産は他人に盗まれても異議を申し立てることはできません。金庫のレシピを緩和してありますのでご利用ください。</li>
-            <li>に、PVPは禁止です。</li>
-        </ul>
-    </details>
+<h1>サーバールール</h1>
 
-    <details>
-        <summary>ダンジョンについて</summary>
-        <ul>
-			<li>い、甲種ダンジョンはボスがいる、進捗に関係あるダンジョンを指します。</li>
-			<li>ろ、乙種ダンジョンはボスや進捗とは関係ないが、宝箱チェストがあるダンジョンを指します。</li>
-            <li>は、甲種ダンジョンは1人以上で攻略可能ですが、攻略前にメンバーと座標を[甲種ダンジョン報告]に記入してください。</li>
-            <li>に、乙種ダンジョンは1人以上で攻略可能ですが、攻略前にディメンションと座標を[乙種ダンジョン報告]に記入してください。</li>
-            <li>ほ、甲種ダンジョンは1人1日3か所まで攻略可能です。サブアカウントも攻略制限に含まれます。<br>	（例として、メインアカウントで2回攻略した場合、サブアカウントではあと1回になります。）</li>
-            <li>へ、乙種ダンジョンは1人1日5か所まで攻略可能です。6か所以上攻略する場合は申請してください。</li>
-			<li>と、攻略済みのダンジョンは制限対象とはなりません。</li>
-			<li>ち、The lost citiesの都市は例外として乙種ダンジョンには含まれないものとします。</li>
-        </ul>
-    </details>
+<!-- ここに今の details ブロックをそのまま置いてOK -->
 
-    <details>
-        <summary>保護チャンクについて（現在FTBmodがないため適用しません）</summary>
-        <ul>
-			<li>い、チャンクの大きさは最大64マスまでです。</li>
-			<li>ろ、他人のチャンクを囲い込むような保護は禁止します。</li>
-			<li>は、ポータルはディメンションごとにつき、保護チャンク内に5か所まで許可します。</li>
-			<li>に、ダンジョンの保護は禁止です。</li>
-        </ul>
-    </details>
-	<h1>最終改定日：2026/03/02</h1>
-	
+<p class="footer">最終改定日：2026/03/02</p>
+
+</div>
+
 </body>
 </html>
